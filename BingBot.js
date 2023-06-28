@@ -13,11 +13,11 @@
 let links = document.links;
 let search_button = document.getElementsByName("search")[0];
 let keywords = [
-  "Техника и электроника", 
-  "Купить телефон", 
-  "Квадрокоптеры и аксессуары", 
-  "Электровелосипеды", 
-  "Смартфоны и планшеты Apple"
+  "Сапоги", 
+  "Сигареты", 
+  "Молоко", 
+  "Кресло-качалка", 
+  "памперсы"
 ];
 let keyword = keywords[getRandom(0, keywords.length)];
 let bingInput = document.getElementsByName("q")[0];
@@ -67,10 +67,10 @@ if (search_button != undefined) {
     }
   }
   let elementExist = setInterval(() => {
-    let element = document.querySelector(".b_pag");
+    let element = document.getElementsByClassName("sb_pagS")[0];
 
     if (element != null) {
-      if (element.innerText == "/n5") {
+      if (element.innerText == "5") {
         nextBingPage = false;
         location.href = "https://www.bing.com/";
       }
@@ -78,7 +78,7 @@ if (search_button != undefined) {
     }
   }, 150);
 
-  if (document.querySelector(".b_pag").innerText == "/n5") {
+  if (document.getElementsByClassName("sb_pagS")[0].innerText == "5") {
     nextBingPage = false;
     location.href = "https://www.bing.com/";
   }
