@@ -34,10 +34,9 @@ if (search_button != undefined) {
     }
   }, 400);
 
-  //Работаем на целевом сайте
+  // Работаем на целевом сайте
 } else if (location.hostname == "www.citilink.ru") {
   console.log("Мы на целевом сайте!");
-  //Работаем на страницах поисковой выдачи
 
   setInterval(() => {
     let index = getRandom(0, links.length);
@@ -49,9 +48,10 @@ if (search_button != undefined) {
       location.href = "https://www.citilink.ru/";
     } 
     else if (links[index].href.indexOf("www.citilink.ru") != -1) {
-      links[index].click();
+      window.location.href = links[index].href;
     }
   }, getRandom(3500, 5500));
+
   // Работаем на страницах поисковой выдачи Bing
 } else {
   let nextBingPage = true;
@@ -61,7 +61,7 @@ if (search_button != undefined) {
       nextBingPage = false;
       console.log("Нашел строку " + link);
       setTimeout(() => {
-        link.click();
+        window.location.href = link.href;
       }, getRandom(3500, 5500));
       break;
     }
