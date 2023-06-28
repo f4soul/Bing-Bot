@@ -13,11 +13,11 @@
 let links = document.links;
 let search_button = document.getElementsByName("search")[0];
 let keywords = [
-  "Сапоги", 
-  "Сигареты", 
-  "Молоко", 
-  "Кресло-качалка", 
-  "памперсы"
+  "Техника и электроника", 
+  "Купить телефон", 
+  "Квадрокоптеры и аксессуары", 
+  "Электровелосипеды", 
+  "Смартфоны и планшеты Apple"
 ];
 let keyword = keywords[getRandom(0, keywords.length)];
 let bingInput = document.getElementsByName("q")[0];
